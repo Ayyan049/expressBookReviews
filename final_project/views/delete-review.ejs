@@ -1,0 +1,16 @@
+<!-- views/delete-review.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Review</title>
+</head>
+<body>
+    <h2>Delete Review for the Book</h2>
+    <form action="/customer/auth/review/<%= isbn %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Delete Review</button>
+    </form>
+</body>
+</html>

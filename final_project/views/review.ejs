@@ -1,0 +1,14 @@
+<form action="/customer/auth/review/<%= isbn %>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <label for="review">Your Review:</label>
+    <textarea id="review" name="review" required><%= reviewText || '' %></textarea><br><br>
+    <button type="submit">Submit Review</button>
+</form>
+
+<% if (userReview) { %>
+    <h3>Your Review:</h3>
+    <p><%= userReview %></p>
+    <form action="/customer/auth/review/<%= isbn %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Review</button>
+    </form>
+<% } %>
